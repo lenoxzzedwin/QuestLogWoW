@@ -1,0 +1,37 @@
+<ion-header >
+  <ion-navbar>
+    <ion-title>Listado de misiones</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<span></span>
+	
+	<ion-card *ngFor="let quest of quests" >
+		<ion-card-content>
+			<ion-card-title (click)="goToDetails(quest)">
+				{{quest.title}}
+			</ion-card-title>
+      <span item-left small class="span-time">{{quest.date | date : 'dd-MMMM'}}</span>
+			<p>
+				{{quest.description}}
+			</p>
+      <ion-col>
+        <button ion-button primary clear small (click)="completedQuest(quest)" item-left>
+          <ion-icon name="checkmark"></ion-icon>
+          <div>Completado!</div> 
+        </button>
+        <button  ion-button secondary outline small  color="danger" (click)="removeQuest(quest)" item-rigth>
+          <ion-icon name="trash"></ion-icon>
+          <div>Eliminar!</div> 
+        </button>
+ 
+      </ion-col>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-item *ngIf="quests.length == 0">
+    <label color="danger" small>No tiene misiones importantes</label>
+  </ion-item>
+ 
+</ion-content>

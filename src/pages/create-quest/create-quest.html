@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Crear Misión</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-item>
+		<ion-label primary stacked>Título</ion-label>
+		<ion-input type="text" placeholder="Título de la misión" [(ngModel)]="newQuest.title"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label primary stacked>Descripción</ion-label>
+		<ion-textarea type="text" placeholder="Descripción" [(ngModel)]="newQuest.description"></ion-textarea>
+	</ion-item>
+
+	<ion-item>
+		<button ion-button (click)="submit(newQuest)">
+			<ion-icon name="chatbubbles"></ion-icon>
+			Añadir misión
+		</button>
+	</ion-item>
+</ion-content>

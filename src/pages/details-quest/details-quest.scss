@@ -1,0 +1,14 @@
+.bg-quest-details{
+   background: url('../../assets/image/bg-quest.png') no-repeat top center fixed !important;
+   background-size: cover !important;
+   p{
+	font-size: 16px;
+   }
+}
+
+.btn-close{
+	background: rgba(223, 23, 23, 0.92);
+    color: #d9d20e;
+    padding: 1px 12px;
+    border: 3px solid rgba(71, 13, 13, 0.6);
+}
